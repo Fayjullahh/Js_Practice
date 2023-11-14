@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="myButton">a</button>
+    <button class="myButton">b</button>
+    <script>
+        for(i = 0; i<2;i++)
+        {
+            var myMusic = document.querySelectorAll(".myButton")[i];
+            myMusic.addEventListener("click",function(){
+                var text = this.innerHTML;
+                if(text=="a")
+                {
+                    var audio = new Audio("sounds/a.mp3");
+                    audio.play;
+                }
+                else if(text=="b")
+                {
+                    var audio = new Audio("sounds/b.mp3");
+                    audio.play();
+                }
+            });
+        }
+    </script>
+</body>
+</html>
