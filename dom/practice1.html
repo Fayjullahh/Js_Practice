@@ -18,7 +18,15 @@
         let myDiv = document.querySelector(".my-div");
         myDiv.appendChild(heading3);
         // appendChild() will add the elements at the end 
-
+        // Adding Element before all the element
+        let heading0 = document.createElement("h1");
+        let text0 = document.createTextNode("This is heading 0");
+        heading0.appendChild(text0);
+        let heading1 = document.getElementsByTagName("h1")[0];
+        myDiv.insertBefore(heading0,heading1);
+        //remove element 
+        let heading2 = document.querySelectorAll(".my-div h1")[2];
+        myDiv.removeChild(heading2);
     </script>
 </body>
 </html>

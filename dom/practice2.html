@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="prev()" >Previous</button>
+    <img src="Images/1.avif" alt="" width="500px" height="300px">
+    <button onclick="next()">Next</button>
+    <script>
+        var photos = ["Images/1.avif","Images/2.jpg","Images/3.jpg"];
+        var count = 0;
+        function next(){
+            count++;
+            if(count>=photos.length)
+            {
+                count = 0;
+                document.querySelector("img").src= photos[count];
+            }
+            else
+            document.querySelector("img").src= photos[count];
+        }
+        function prev()
+        {
+            count--;
+            if(count<0)
+            {
+                count = photos.length - 1;
+                document.querySelector("img").src = photos[count];
+            }
+            else
+                document.querySelector("img").src = photos[count];
+        }
+    </script>
+</body>
+</html>
