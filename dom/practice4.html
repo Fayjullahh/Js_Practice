@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .para{
+            font-size:2rem;
+            font-weight: 900;
+            color:red;
+            font-style: italic;
+
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <script>
+        var myVar = document.querySelectorAll("p")[0];
+        myVar.addEventListener("click",function(){
+            myVar.classList.add("para");
+        });
+        var myVar2 = document.querySelectorAll("p")[1];
+        myVar2.addEventListener("mouseover",function(){
+            myVar2.classList.add("para");
+        });
+        myVar2.addEventListener("mouseout",function(){
+            myVar2.classList.remove("para");
+        });
+    </script>
+</body>
+</html>

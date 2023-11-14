@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>You have not clicked any button yet</h1>
+    <button class="myButton">Button 1</button>
+    <button class="myButton">Button 2</button>
+    <button class="myButton">Button 3</button>
+    <button class="myButton">Button 4</button>
+    <button class="myButton">Button 5</button>
+    <button class="myButton">Button 6</button>
+    <button class="myButton">Button 7</button>
+    <button class="myButton">Button 8</button>
+    <hr>
+    <h1>You have not clicked any button yet</h1>
+    <button class="my-Button">Button 1</button>
+    <button class="my-Button">Button 2</button>
+    <button class="my-Button">Button 3</button>
+    <button class="my-Button">Button 4</button>
+    <button class="my-Button">Button 5</button>
+    <button class="my-Button">Button 6</button>
+    <button class="my-Button">Button 7</button>
+    <button class="my-Button">Button 8</button>
+    <script>
+       var myVar1 = document.getElementsByClassName("myButton")[0];
+        myVar1.addEventListener("click",function(){
+            var myText1 = this.innerHTML;
+            document.getElementsByTagName("h1")[0].innerHTML="You have clicked " + myText1;
+        });
+       var myVar2 = document.getElementsByClassName("myButton")[1];
+       myVar2.addEventListener("click",function(){
+        var myText2 = this.innerHTML;
+        document.getElementsByTagName("h1")[0].innerHTML = "You have clicked " + myText2;
+       });
+       var myVar3 = document.getElementsByClassName("myButton")[2];
+       myVar3.addEventListener("click",function(){
+        var myText3 = this.innerHTML;
+        document.getElementsByTagName("h1")[0].innerHTML="You have clicked " + myText3;
+       });
+       var myVar4 = document.querySelectorAll(".myButton")[3];
+       myVar4.addEventListener("click",function(){
+        var myText4 = this.innerHTML;
+        document.querySelector("h1").innerHTML = "You have clicked "+myText4;
+       });
+       myVar5 = document.querySelectorAll(".myButton")[4];
+       myVar5.addEventListener("click",function(){
+        var myText5 = this.innerHTML;
+        document.querySelector("h1").innerHTML = "You have clicked "+myText5;
+       });
+       var myVar6 = document.querySelectorAll(".myButton")[5];
+       myVar6.addEventListener("click",function(){
+        var myText6 = this.innerHTML;
+        document.querySelector("h1").innerHTML = "You have clicked "+ myText6;
+       });
+       var myVar7 = document.querySelectorAll(".myButton")[6];
+       myVar7.addEventListener("click",function(){
+        var myText7 = this.innerHTML;
+        document.querySelector("h1").innerHTML = "You have clicked "+myText7;
+       });
+       var myVar8 = document.querySelectorAll(".myButton")[7];
+       myVar8.addEventListener("click",function(){
+        var myText8 = this.innerHTML;
+        document.querySelector("h1").innerHTML = "You have clicked "+ myText8;
+       });
+
+       //doing it by for loop
+       
+       for(i=0 ; i< 8; i++){
+            var myVar = document.querySelectorAll(".my-Button")[i];
+            myVar.addEventListener("click",function(){
+            var myText = this.innerHTML;
+            document.querySelectorAll("h1")[1].innerHTML = "You have clicked "+ myText;
+            });
+       }
+
+    </script>
+</body>
+</html>
